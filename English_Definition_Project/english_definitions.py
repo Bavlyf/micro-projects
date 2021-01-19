@@ -14,7 +14,7 @@ def word_definition(word,english_dict):
     if len(similar_words) > 0:
         yn = input(f"Did you mean {similar_words[0]}? if yes write Y if no write N.\n")
         if yn.lower() == "y":
-            return similar_words[0] + "\n".join(english_dict[similar_words[0]])
+            return "\n".join(english_dict[similar_words[0]])
         elif yn.lower() == "n":
             return "Word does not exist"
         else:
