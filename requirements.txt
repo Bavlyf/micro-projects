@@ -1,0 +1,4 @@
+pandas
+jupyterlab
+mysql-connector-python
+xlrd
