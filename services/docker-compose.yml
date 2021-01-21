@@ -1,0 +1,21 @@
+version: '3.3'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: 'P4ssW0rd'
+       MYSQL_DATABASE: dictionary
+       MYSQL_USER: pavshe
+       MYSQL_PASSWORD: pavshe123
+     ports:
+       - "3306:3306"
+     networks:
+       - services_network
+volumes:
+  db_data: {}
+networks:
+  services_network:
