@@ -3,11 +3,13 @@ import mysql.connector
 
 data = json.load(open("./dataset/data.json"))
 
+db_conf = json.load(open("./configuration/db.conf"))
+
 con = mysql.connector.connect(
-user="root",
-password="xyz",
-host="localhost",
-database="english_dictionary"
+user=db_conf['user'],
+password=db_conf['password'],
+host=db_conf['host'],
+database=db_conf['database']
 )
 cursor = con.cursor()
 for word in data:
